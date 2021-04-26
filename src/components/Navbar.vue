@@ -72,16 +72,6 @@ export default {
       drawer: false,
       group: '',
       currentPage: 0,
-      // followSystemDarkMode: true,
-
-      // searchText: '',
-      // username: '',
-      // showSidebar: false,
-      // currentPage: 0,
-      // inAllowBackRoutes: false,
-      // inBanMenuRoutes: true,
-      // showSearchBox: false,
-      // floorToGo: '',
     }
   },
   methods: {

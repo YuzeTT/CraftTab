@@ -5,11 +5,6 @@ export default {
       icon: 'mdi-home',
       route: 'home',
     },
-    // {
-    //   title: '账户',
-    //   icon:'',
-    //   route: '/user'
-    // },
     {
       title: '关于',
       icon: 'mdi-information',
