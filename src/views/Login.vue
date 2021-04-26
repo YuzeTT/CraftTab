@@ -149,16 +149,6 @@ export default {
         error: false,
         warning: false
       }
-      // followSystemDarkMode: true,
-
-      // searchText: '',
-      // username: '',
-      // showSidebar: false,
-      // currentPage: 0,
-      // inAllowBackRoutes: false,
-      // inBanMenuRoutes: true,
-      // showSearchBox: false,
-      // floorToGo: '',
     }
   },
   methods: {
