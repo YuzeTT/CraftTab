@@ -5,8 +5,10 @@
     <!-- <v-card class="overflow-hidden"> -->
     <v-app-bar absolute
                elevate-on-scroll
+               color="navbarColor"
                scroll-target="#scrolling-techniques-7">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon v-if="!inBanMenuRoutes"
+                          @click.stop="drawer = !drawer" />
 
       <v-toolbar-title>CraftTab</v-toolbar-title>
 
@@ -72,18 +74,54 @@ export default {
       drawer: false,
       group: '',
       currentPage: 0,
+      inBanMenuRoutes: true,
     }
   },
   methods: {
     switchThemes: function () {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
-      console.log(
-        `%c [切换主题] 当前主题 %c ${this.$vuetify.theme.dark == false ? "light" : "dark"} %c`,
-        'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
-        'background:#41b883 ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
-        'background:transparent'
-      )
+      // console.log(
+      //   `%c [切换主题] 当前主题 %c ${this.$vuetify.theme.dark == false ? "light" : "dark"} %c`,
+      //   'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+      //   'background:#41b883 ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+      //   'background:transparent'
+      // )
     }
-  }
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler: function () {
+        // this.isDarkTheme = matchMedia('(prefers-color-scheme: dark)').matches
+        // matchMedia('(prefers-color-scheme: dark)').addEventListener(
+        //   'change',
+        //   (event) => {
+        //     this.isDarkTheme = event.matches
+        //   }
+        // )
+        // this.inAllowBackRoutes = (() => {
+        //   const currentRoute = this.$router.currentRoute.name
+        //   var i
+        //   for (i of this.$feConfig.allowBackRoutes) {
+        //     if (currentRoute == i) {
+        //       return true
+        //     }
+        //   }
+        //   return false
+        // })()
+        this.inBanMenuRoutes = (() => {
+          const currentRoute = this.$route.name
+          var i
+          for (i of this.$ctConfig.banMenuRoutes) {
+            if (currentRoute == i) {
+              return true
+            }
+          }
+          return false
+        })()
+        // this.username = localStorage.getItem('username')
+      },
+    },
+  },
 }
 </script>

@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <v-row no-gutters
-             style="height: 95vh;">
+             style="height: 85vh;">
         <v-col align-self="center">
           <v-card class="mx-auto rounded-lg"
                   max-width="388"

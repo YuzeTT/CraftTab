@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <!-- <Navbar /> -->
+      <Navbar />
       <router-view />
     </v-main>
   </v-app>
@@ -20,13 +20,13 @@ body {
 <script>
 // import HelloWorld from './components/HelloWorld';
 import './plugins/vuetify'
-// import Navbar from '@/components/Navbar.vue'
+import Navbar from '@/components/Navbar.vue'
 
 export default {
   name: 'App',
 
-  // components: {
-  //   Navbar,
-  // },
+  components: {
+    Navbar,
+  },
 };
 </script>
