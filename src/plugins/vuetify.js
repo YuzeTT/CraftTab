@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
+import ctTheme from './theme'
 // import { Drawer } from 'vuetify/lib/directives'
 import {
   VApp,
@@ -73,7 +74,12 @@ Vue.use(Vuetify, {
   }
 })
 
-const opts = { theme: { dark: false }, }
+const opts = {
+  theme: {
+    themes: ctTheme,
+    dark: false
+  },
+}
 
 // export default new Vuetify()
 
