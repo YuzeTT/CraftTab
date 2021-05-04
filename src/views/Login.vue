@@ -27,7 +27,7 @@
                              text
                              type="error"
                              v-if="loginResult.error">
-                      <p class="mb-2">校验失败！用户名或密码错误。</p><span class="font-weight-thin">错误代码：-1</span>
+                      <p class="mb-2">校验失败！用户名或密码错误。</p><span class="font-weight-thin">错误代码：-2</span>
                     </v-alert>
                     <v-alert icon="mdi-shield-lock-outline"
                              text
@@ -128,6 +128,7 @@
 </template>
 
 <script>
+import { login, verifyToken } from '../api/account'
 export default {
   name: 'Login',
   // components: {
@@ -169,15 +170,39 @@ export default {
       // this.$router.replace('/')
 
       // 判断密码
-      if (this.username + this.password === "playerpublic") {
-        this.loginResult.success = true
-        this.loginResult.warning = true
-        this.loginResult.error = false
-      } else {
-        this.loginResult.success = false
-        this.loginResult.warning = false
-        this.loginResult.error = true
+      // if (this.username + this.password === "playerpublic") {
+      //   this.loginResult.success = true
+      //   this.loginResult.warning = true
+      //   this.loginResult.error = false
+      // } else if (this.username + this.password === "admin") {
+      //   console.log(login(this.username, this.password))
+      //   // console.log(login(this.username, this.password))
+      //   // alert()
+      // } else {
+      //   this.loginResult.success = false
+      //   this.loginResult.warning = false
+      //   this.loginResult.error = true
+      // }
+      let loginCode = login(this.username, this.password)
+      switch (loginCode) {
+        case 200:
+          this.$router.replace('/')
+          this.loginResult.success = true
+          this.loginResult.warning = false
+          this.loginResult.error = false
+          break
+        case -1:
+          this.loginResult.success = false
+          this.loginResult.warning = false
+          this.loginResult.error = true
+          break
+        case -2:
+          this.loginResult.success = false
+          this.loginResult.warning = false
+          this.loginResult.error = true
+          break
       }
+      // console.log(verifyToken("1"))
     }
   }
 }
