@@ -5,7 +5,7 @@ export default {
   navItems: [
     {
       title: '首页',
-      name: null,
+      name: 'Home',
       icon: 'mdi-home',
       route: 'home',
     },
