@@ -3,11 +3,14 @@ import colors from 'vuetify/lib/util/colors'
 export default {
   light: {
     navbarColor: '#12161C',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#F4F7FA',
     navbarTitleColor: '#F0B90B',
     navbarListColor: '#1E2126',
     navbarListChipColor: '#323023',
     navbarListIconColor: '#F0B90A',
+    homeCardColor: '#1E2026',
+    homeButtonColor: '#1C2F48',
+    homeButtonTextColor: '#6DA8FF',
   },
   dark: {
     navbarColor: '#12161C',
@@ -16,6 +19,9 @@ export default {
     navbarListColor: '#1E2126',
     navbarListChipColor: '#323023',
     navbarListIconColor: '#F0B90A',
+    homeCardColor: '#1E2026',
+    homeButtonColor: '#1C2F48',
+    homeButtonTextColor: '#6DA8FF',
   },
 
 

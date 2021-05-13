@@ -37,6 +37,7 @@ import {
   VAlert,
   VMenu,
   VChip,
+  VCardTitle,
 } from 'vuetify/lib'
 
 Vue.use(Vuetify, {
@@ -75,6 +76,7 @@ Vue.use(Vuetify, {
     VAlert,
     VMenu,
     VChip,
+    VCardTitle,
   }
 })
 

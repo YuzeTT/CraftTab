@@ -6,8 +6,12 @@ import Status from '../views/Status.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  { 
+    path: '/', 
+    redirect: '/home' 
+  },
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
   },

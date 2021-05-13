@@ -2,15 +2,15 @@
   <div class="home">
     <!-- <v-system-bar app
                   color="primary"></v-system-bar> -->
-    <!-- <v-card class="overflow-hidden"> -->
-    <v-app-bar absolute
+    <!-- <v-card class="overflow-hidden">absolute -->
+    <v-app-bar 
                elevate-on-scroll
                color="navbarColor"
                scroll-target="#scrolling-techniques-7">
       <!-- <v-app-bar-nav-icon v-if="!inBanMenuRoutes"
                           @click.stop="drawer = !drawer" /> -->
 
-      <v-toolbar-title class="navbarTitleColor--text font-weight-black">KOTSWAP</v-toolbar-title>
+      <v-toolbar-title class="navbarTitleColor--text font-weight-black">KotSwap</v-toolbar-title>
       <!-- <v-btn icon><v-icon>mdi-apps</v-icon></v-btn> -->
       <v-menu offset-y open-on-hover v-if="!inBanMenuRoutes">
         <template v-slot:activator="{ on, attrs }">
@@ -32,7 +32,7 @@
                        :key="i"
                        :disabled="inDisabledList(item.name)"
                        @click.stop="$router.replace(item.route)">
-            <v-list-item-avatar>
+            <v-list-item-avatar class="rounded">
               <v-icon
                 class="navbarListChipColor"
                 color="navbarListIconColor"
@@ -91,12 +91,12 @@
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-sheet id="scrolling-techniques-7"
+    <!-- <v-sheet id="scrolling-techniques-7"
              class="overflow-y-auto"
              max-height="600">
-      <v-container style="height: 60px;">
+      <v-container style="height: 56px;">
       </v-container>
-    </v-sheet>
+    </v-sheet> -->
     <!-- </v-card> -->
 
     <v-navigation-drawer v-model="drawer"
