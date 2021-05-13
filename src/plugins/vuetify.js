@@ -35,6 +35,8 @@ import {
   VSelect,
   VSnackbar,
   VAlert,
+  VMenu,
+  VChip,
 } from 'vuetify/lib'
 
 Vue.use(Vuetify, {
@@ -71,13 +73,15 @@ Vue.use(Vuetify, {
     VSelect,
     VSnackbar,
     VAlert,
+    VMenu,
+    VChip,
   }
 })
 
 const opts = {
   theme: {
     themes: ctTheme,
-    dark: false
+    dark: true
   },
 }
 
