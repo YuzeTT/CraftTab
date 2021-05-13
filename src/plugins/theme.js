@@ -2,10 +2,20 @@ import colors from 'vuetify/lib/util/colors'
 
 export default {
   light: {
-    navbarColor: 'whith'
+    navbarColor: '#12161C',
+    backgroundColor: '#F5F5F5',
+    navbarTitleColor: '#F0B90B',
+    navbarListColor: '#1E2126',
+    navbarListChipColor: '#323023',
+    navbarListIconColor: '#F0B90A',
   },
   dark: {
-    navbarColor: '#121212'
+    navbarColor: '#12161C',
+    backgroundColor: '#181A20',
+    navbarTitleColor: '#F0B90B',
+    navbarListColor: '#1E2126',
+    navbarListChipColor: '#323023',
+    navbarListIconColor: '#F0B90A',
   },
 
 
